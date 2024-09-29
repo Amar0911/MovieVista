@@ -1,7 +1,8 @@
+
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(60, 3, 3);
+    background-color: rgb(52, 8, 8);
     font-size: large;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 600;
@@ -43,14 +44,14 @@
     height: 60vh;
     width: 20vw;
     object-fit: cover;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease;
     aspect-ratio: 3/2;
 }
 
 @media (max-width:768px) {
     .card-image{
         height: auto;
-        width: 300px;
+        width: 250px;
     }
 }
 
@@ -62,8 +63,3 @@
 .slider.active {
     cursor: grabbing;
 }
-
-
-/* card */
-
-
