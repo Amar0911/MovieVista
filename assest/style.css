@@ -1,24 +1,67 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(64, 38, 38);
-    font-size: large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 600;
+  * {
+    background-color: rgb(213, 196, 196);
+  }  
+
+  /* navbar */
+
+  .navbar {
+    background-color: transparent;
+    position: sticky;
+    margin-top: 0px;
+  }
+
+  #nav {
+    background-color: transparent;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #ffffff; 
+  }
+  
+  .nav-link:hover {
+    color: #d1d1d1; 
+  }
+  
+  .dropdown-menu {
+    background-color: rgb(213, 196, 196); 
+  }
+  
+  .dropdown-item {
+    color: #ffffff; 
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e6eaee; 
+  }
+
+
+
+  /* carousel */
+
+  .para{
+    background-color: white;
+    
+  }
+
+  @media (max-width: 768px) {
+    .carousel-item {
+        height: 400px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item{
+        height: 450px;
+    }
 }
 
 
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #222;
-}
-
-.container-fluid {
-    width: 100%;
-}
+  /* cards*/
 
 .drag {
     position: relative;
@@ -45,14 +88,14 @@ body {
 .card-image {
     flex: 0 0 auto; 
     width: 200px; 
-    height: auto; 
+        height: auto; 
     border-radius: 10px;
     scroll-snap-align: center; 
     transition: transform 0.2s; 
 }
 
 .card-image:hover {
-    transform: scale(1.05); 
+    /* transform: scale(1.05);  */
 }
 
 /* Responsive */
@@ -67,5 +110,33 @@ body {
         width: 100px;
     }
 }
+  
+/*card shrink */
 
-
+  #cont-ink {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .shrink {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 20px; 
+  }
+  
+  .shrink img {
+    width: 150px;
+    height: auto; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+    cursor: pointer; 
+  }
+  
+  .shrink img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  }
+  
