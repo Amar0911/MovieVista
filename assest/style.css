@@ -1,50 +1,89 @@
 
   * {
-    background-color: rgb(213, 196, 196);
+    /* background-color: rgb(23, 16, 16); */
+    background-color: #000000;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
   }  
 
-  /* navbar */
+/* navbar */ 
 
-  .navbar {
-    background-color: transparent;
-    position: sticky;
-    margin-top: 0px;
-  }
 
-  #nav {
-    background-color: transparent;
-  }
+#stick {
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+}
 
-  .navbar-brand {
-    font-weight: bold;
-  }
-  
-  .nav-link {
-    color: #ffffff; 
-  }
-  
-  .nav-link:hover {
-    color: #d1d1d1; 
-  }
-  
-  .dropdown-menu {
-    background-color: rgb(213, 196, 196); 
-  }
-  
-  .dropdown-item {
-    color: #ffffff; 
-  }
-  
-  .dropdown-item:hover {
-    background-color: #e6eaee; 
-  }
+
+#logo {
+  height: 50px;
+  margin-left: 30px;
+}
+
+#icon {
+  margin-right: 110px;
+}
+
+.nav-item {
+  margin-left: 10px;
+  font-family: Arial;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+  color: red;
+  transition: 1s ease-in;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline;
+}
+
+/* search bar */
+
+.box {
+  display: flex;
+  cursor: pointer;
+  padding: 10px 20px;
+  /* background-color: #fff; */
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(226, 9, 9, 0.3);
+}
+
+.box:hover input{
+  width: 300px;
+}
+
+.box input{
+  width: 0;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.8s ease-in-out;
+  background: transparent;
+}
+
+.box a .fa-solid{
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.box input::placeholder {
+  color: #ec1919;
+  opacity: 1; 
+}
 
 
 
   /* carousel */
 
-  .para{
-    background-color: white;
+  .carousel-caption {
+    background-color: transparent;
+    margin-left: 600px;
+    margin-bottom: 400px;
     
   }
 
@@ -81,17 +120,17 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 10px; 
+    gap: 20px; 
     scrollbar-width: none;
 }
 
 .card-image {
     flex: 0 0 auto; 
     width: 200px; 
-        height: auto; 
-    border-radius: 10px;
-    scroll-snap-align: center; 
-    transition: transform 0.2s; 
+    height: auto; 
+    border-radius: 80px;
+    /* scroll-snap-align: center;  */
+    /* transition: transform 0.2s;  */
 }
 
 .card-image:hover {
