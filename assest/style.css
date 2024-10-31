@@ -7,7 +7,7 @@
   }  
 
 .body {
-  background-color: #000000;
+  background-image: linear-gradient(rgb(0, 0, 0),rgb(55, 49, 103),rgb(46, 38, 185));
 }
 
 /* navbar */ 
@@ -23,11 +23,12 @@
 
 #logo {
   height: 50px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .nav-item {
   font-family: Arial;
+  font-size: 25px;
 }
 
 .nav-item:hover {
@@ -56,6 +57,10 @@
   margin-right: 25px;
 }
 
+#search-icon {
+  font-size: 25px;
+}
+
 .box {
   display: flex;
   cursor: pointer;
@@ -63,6 +68,7 @@
   border-radius: 30px;
   align-items: center;
   margin-right: 10px;
+  font-size: 20px;
 }
 
 .box input {
@@ -111,13 +117,15 @@
 
 @media (max-width: 768px) {
     .carousel-item {
-    height: 400px; 
+      height: 300px; 
+      background-size: cover;
   }
 }
 
 @media (max-width: 480px) {
     .carousel-item{
-    height: 450px;
+      height: 300px;
+      background-size: cover;
   }
 }
 
@@ -135,7 +143,7 @@
   text-align: start;
 }
 
-.heading {
+.sm-heading {
   color: white;
   margin-bottom: 20px;
   font-size: 24px; 
@@ -158,8 +166,8 @@
 
 .card-image {
   flex: 0 0 auto; 
-  width: 230px; 
-  height: 350px; 
+  width: 300px; 
+  height: 150px; 
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s; 
   scroll-snap-align: start; 
@@ -185,21 +193,23 @@
   opacity: 1; 
 }
 
+
 /* Responsive */
 
 
 @media (max-width: 768px) {
   .card-image {
-    width: 150px; 
+    width: 160px; 
+    height: 100px;
   }
 }
 
 @media (max-width: 480px) {
   .card-image {
     width: 160px;
+    height: 100px;
   }
 }
-
 
 /* footer */
 
@@ -259,10 +269,10 @@
 
 
 .in-put {
-  border: 2px solid red;
+  border: 2px solid rgb(0, 0, 0);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 5px 0 0  red;
+  box-shadow: 5px 0 0  rgb(13, 8, 28);
 }
 
 .log {
@@ -288,10 +298,10 @@
 }
 
 .re-put {
-  border: 2px solid red;
+  border: 2px solid rgb(0, 0, 0);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 5px 0 0  red;
+  box-shadow: 5px 0 0  rgb(13, 8, 28);
 }
 
 .log-link {
@@ -301,4 +311,98 @@
 
 .log-link:hover {
   color: #fcfafa;
+}
+
+.form-control {
+  width: 300px;
+  border-radius: 25px;
+}
+
+
+/* profile */
+
+.pro-file {
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.profile-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 0 0  red;
+  border: 2px solid red;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.face {
+ font-size: 40px;
+}
+
+.username {
+  color: gray;
+}
+
+.contact-info, .settings {
+  margin: 20px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #e3f9f9;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ec1919;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .profile-container {
+      max-width: 90%;
+      padding: 15px;
+  }
+
+  .face {
+      font-size: 30px;
+  }
+
+  h1 {
+      font-size: 1.5em; 
+  }
+
+  .username {
+      font-size: 0.9em;
+  }
+
+  ul li {
+      font-size: 0.9em; 
+  }
+}
+
+@media (max-width: 480px) {
+  .face {
+      font-size: 25px;
+  }
+
+  h1 {
+      font-size: 1.3em;
+  }
 }
