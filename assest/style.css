@@ -115,17 +115,29 @@
   /* carousel */
 
 
+.watch {
+  background-color: rgb(17, 12, 12);
+  color: #ec1919;
+  padding: 8px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 10px;
+}
+
+.watch:hover {
+  background-color: #ec1919;
+  color: rgb(17, 12, 12);
+}
+
 @media (max-width: 768px) {
     .carousel-item {
       height: 300px; 
-      background-size: cover;
   }
 }
 
 @media (max-width: 480px) {
     .carousel-item{
       height: 300px;
-      background-size: cover;
   }
 }
 
@@ -143,8 +155,28 @@
   text-align: start;
 }
 
-.sm-heading {
-  color: white;
+.see-more {
+  display: flex;
+  gap: 20px;
+}
+
+#right-icon {
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.head {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+}
+
+
+.heading {
   margin-bottom: 20px;
   font-size: 24px; 
 }
@@ -177,7 +209,7 @@
 
 .card-details {
   position: absolute;
-  bottom: 10px; 
+  bottom: -16px; 
   left: 0;
   right: 0;
   color: white;
@@ -320,89 +352,3 @@
 
 
 /* profile */
-
-.pro-file {
-  font-family: Arial, sans-serif;
-  margin-top: 40px;
-  padding: 20px;
-}
-
-.profile-container {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 0 0  red;
-  border: 2px solid red;
-}
-
-.profile-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.face {
- font-size: 40px;
-}
-
-.username {
-  color: gray;
-}
-
-.contact-info, .settings {
-  margin: 20px 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 5px 0;
-}
-
-a {
-  text-decoration: none;
-  color: #e3f9f9;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #ec1919;
-}
-
-/* Responsive Styles */
-
-@media (max-width: 768px) {
-  .profile-container {
-      max-width: 90%;
-      padding: 15px;
-  }
-
-  .face {
-      font-size: 30px;
-  }
-
-  h1 {
-      font-size: 1.5em; 
-  }
-
-  .username {
-      font-size: 0.9em;
-  }
-
-  ul li {
-      font-size: 0.9em; 
-  }
-}
-
-@media (max-width: 480px) {
-  .face {
-      font-size: 25px;
-  }
-
-  h1 {
-      font-size: 1.3em;
-  }
-}
