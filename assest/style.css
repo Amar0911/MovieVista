@@ -124,6 +124,7 @@
   font-weight: 10px;
 }
 
+
 .watch:hover {
   background-color: #ec1919;
   color: rgb(17, 12, 12);
@@ -206,6 +207,9 @@ a {
 }
 
 
+.fa-star{
+  color: yellow;
+}
 
 .card-details {
   position: absolute;
@@ -219,6 +223,7 @@ a {
   opacity: 0; 
   transition: opacity 0.3s; 
   text-align: center; 
+  font-size: 18px;
 }
 
 .cards:hover .card-details {
@@ -315,6 +320,7 @@ a {
 .reg-link {
   font-size: 20px;
   color: #ec1919;
+  justify-content: center;
 }
 
 .reg-link:hover {
@@ -339,6 +345,7 @@ a {
 .log-link {
   font-size: 20px;
   color: #ec1919;
+  justify-content: center;
 }
 
 .log-link:hover {
@@ -352,3 +359,42 @@ a {
 
 
 /* profile */
+
+.profile {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 5px 0 0  rgb(13, 8, 28);
+}
+
+
+/*  card.html */ 
+
+.card-img-top {
+  width: 300px;
+  height: 200px;
+}
+
+.card-de {
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card {
+  background: black;
+}
+
+
+/* card play */
+
+.img-play {
+  width: 600px;
+  height: 400px;
+}
+
+.card-des {
+  display: flex;
+  gap: 50px;
+}
+
