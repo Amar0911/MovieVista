@@ -37,7 +37,7 @@
               <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i></a>
+              <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
             </li>
             <li class="nav-item dropdown" id="icon">
               <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,7 +46,8 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="login.html">Login</a></li>
                 <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+                <li><a class="dropdown-item" href="#">Setting</a></li>
+                <li><a class="dropdown-item" href="index.html">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -75,6 +76,7 @@
       <label for="floatingPassword" style="color: black;">Password</label>
     </div>
     <p>If you don't have an account please <a href="signup.html" class="reg-link">Register</a></p>
+    <p class="forget"><a href="#">Forget Password</a></p>
     <button type="submit" class="btn btn-success" id="but-ton">Login</button>
   </form>
 </div>
@@ -85,39 +87,51 @@
 
 <!--footer-->
 
-<footer class="footer">
+<footer class="footer bg-dark text-white py-5">
   <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-3">
-          <a href="">
-            <h3><span style="color: red; font-size: 40px; font-family:Times New Roman;">M</span>ovie<span style="color: red; font-size: 40px; font-family:Times New Roman;">V</span>ista<small style="font-size: 15px;">&reg;</small></h3>
-          </a>
-        </div>
-          <div class="col-lg-3 col-md-6 mb-3">
-              <h5>About Us</h5>
-              <p>Learn more about our mission and vision. We aim to provide the best movie experience.</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-3">
-              <h5>Quick Links</h5>
-              <ul class="list-unstyled">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </div>
-          <div class="col-lg-3 col-md-12 mb-3">
-              <h5>Follow Us</h5>
-              <div class="social-icons">
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
-              </div>
-          </div>
+    <div class="row" style="justify-content: space-between;">
+      <div class="col-lg-3 col-md-12 mb-4 text-center text-lg-start">
+        <a href="" class="footer-logo">
+          <h3><span style="color: red; font-size: 40px; font-family: Times New Roman;">M</span>ovie
+            <span style="color: red; font-size: 40px; font-family: Times New Roman;">V</span>ista<small
+              style="font-size: 15px;">&reg;</small></h3>
+        </a>
       </div>
+
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 style="display: flex; justify-content: center; align-items: center;">About Us</h5>
+        <p>Learn more about our mission and vision. We aim to provide the best movie experience to all movie
+          lovers around the world.</p>
+      </div>
+
+
+
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled" style="margin-left: 20px;">
+          <li><a href="index.html" class="text-white">Home</a></li>
+          <li><a href="about.html" class="text-white">About</a></li>
+          <li><a href="contact.html" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="col-lg-2 col-md-12 mb-4">
+        <h5>Follow Us</h5>
+        <div class="social-icons" style="margin-left: 20px;">
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook fa-2x"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-twitter fa-2x"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram fa-2x"></i></a>
+          <a href="#" class="text-white me-3"><i class="fa-brands fa-youtube fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
   </div>
+
+
   <div class="text-center py-3">
-      <small>&copy; 2024 MovieVista. All rights reserved.</small>
+    <small>&copy; 2024 MovieVista. All rights reserved.</small>
   </div>
 </footer>
 
