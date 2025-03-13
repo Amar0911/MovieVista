@@ -116,160 +116,107 @@
 
   /* ############################################################## carousel ####################################################### */
 
+  
+  .car-cont {
+    position: relative;
+    text-align: start;
+    align-items: start;
+  }
 
-.content {
-  position: relative;
-  justify-content: start;
-  text-align: start;
-  align-items: start;
+  .car-count p {
+    font-size: 8px;
+    width: 300px;
+    word-break: break-all;
 }
-
-.content h1 {
-  font-size: 30px;
-}
-
-.content p {
-  font-size: 13px;
-  width: 300px;
-  word-break: break-all;
-}
-
-.details {
-  display: flex;
-  align-items: center;
-}
-
-.details h6 {
-  color: rgb(255, 255, 255, 0.8);
-  font-size: 12px;
-  margin-right: 10px;
-}
-
-.details h5 {
-  color: rgb(142, 230, 48);
-  font-size: 12px;
-  margin-right: 10px;
-}
-
-#years {
-  color: #fff;
-  font-size: 12px;
-  margin-right: 10px;
-}
-
-.details h3 {
-  color: rgb(255, 255, 255, 0.8);
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-}
-
-.details h3 #rates {
-  background: yellow;
-  color: #000;
-  padding: 0px 3px;
-  margin: 0px 5px 0px 5px;
-  font-weight: 500;
-}
-
-.details h3 i {
-  margin: 5px;
-}
-
-.btns {
-  justify-content: center;
-}
-
-.watch {
-  background-color: rgb(17, 12, 12);
-  color: #ec1919;
-  padding: 8px;
-  border-radius: 25px;
-  font-size: 20px;
-  font-weight: 10px;
-}
-
-
-.watch:hover {
-  background-color: #ec1919;
-  color: rgb(17, 12, 12);
-}
-
-/* responsive */
-
-@media (max-width:576px) {
-  .content h1 {
-    font-size: 15px;
+  
+  .car-cont h1 {
+    font-size: 24px; /* Reduced from 30px */
   }
   
-  .content p {
-    font-size: 8px;
-    width: 100px;
-    word-break: break-all;
+  .car-cont p {
+    font-size: 8px; /* Reduced from 13px */
+    width: 280px;
+    word-break: break-word; /* Changed from break-all for better readability */
   }
   
   .details {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
   }
   
-  .details h6 {
-    color: rgb(255, 255, 255, 0.8);
-    font-size: 8px;
-    margin-right: 6px;
-  }
-  
-  .details h5 {
-    color: rgb(142, 230, 48);
-    font-size: 8px;
-    margin-right: 6px;
-  }
-  
-  #years {
-    color: #fff;
-    font-size: 8px;
-    margin-right: 6px;
-  }
-  
+  .details h6,
+  .details h5,
+  #years,
   .details h3 {
-    color: rgb(255, 255, 255, 0.8);
-    font-size: 8px;
-    display: flex;
-    align-items: center;
+    font-size: 10px; /* Reduced from 12px */
+    margin-right: 8px;
   }
   
   .details h3 #rates {
     background: yellow;
     color: #000;
-    padding: 0px 3px;
-    margin: 0px 5px 0px 5px;
-    font-weight: 300;
+    padding: 2px 5px;
+    margin: 0 5px;
+    font-weight: 500;
   }
   
   .details h3 i {
-    margin: 2px;
+    margin: 3px;
   }
   
+  /* Centering Watch Now Button */
   .btns {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 10px;
   }
   
   .watch {
     background-color: rgb(17, 12, 12);
     color: #ec1919;
-    padding: 6px;
+    padding: 6px 15px;
     border-radius: 25px;
-    font-size: 13px;
-    font-weight: 10px;
+    font-size: 16px; /* Reduced size */
+    font-weight: bold;
+    transition: 0.3s;
   }
-  
   
   .watch:hover {
     background-color: #ec1919;
     color: rgb(17, 12, 12);
   }
-}
+  
+  /* Responsive Adjustments */
+  @media (max-width: 576px) {
+    .car-cont h1 {
+      font-size: 18px;
+    }
+  
+    .car-cont p {
+      font-size: 10px;
+      /* width: 200px; */
+    }
+  
+    .details h6,
+    .details h5,
+    #years,
+    .details h3 {
+      font-size: 8px;
+      margin-right: 5px;
+    }
+  
+    .watch {
+      font-size: 14px;
+      padding: 5px 12px;
+    }
 
+    .car-title {
+      font-size: 0.6rem;
+    }
+  }
+  
 
 
 
@@ -278,7 +225,6 @@
 
 .drag {
   position: relative;
-  overflow: hidden;
   padding: 20px 0; 
 }
 
@@ -444,17 +390,17 @@ a {
 
 
 
-
-
-
 .footer {
-  background-color: #343a40; 
+  background-color: #343a40;
+  padding: 20px 0;
+  text-align: center; /* Centers content */
 }
 
 .footer .footer-logo h3 {
   font-family: 'Times New Roman', Times, serif;
   color: #f8f9fa;
   font-size: 40px;
+  margin-bottom: 10px;
 }
 
 .footer .footer-logo span {
@@ -464,11 +410,19 @@ a {
 .footer h5 {
   font-size: 18px;
   font-weight: bold;
+  color: #f8f9fa;
+  margin-top: 10px;
 }
 
 .footer ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 10px 0;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .footer ul li a {
@@ -481,9 +435,16 @@ a {
   color: #007bff;
 }
 
+.footer .social-icons {
+  margin-top: 15px;
+}
+
 .footer .social-icons a {
   color: #f8f9fa;
   transition: color 0.3s;
+  font-size: 0.rem;
+  margin: 0 10px;
+  display: inline-block;
 }
 
 .footer .social-icons a:hover {
@@ -494,21 +455,27 @@ a {
   margin-right: 5px;
 }
 
-
-
+/* Responsive Design */
 @media (max-width: 767px) {
-  .footer .social-icons a {
-    font-size: 1.5rem; 
-  }
-
-  .footer h5 {
-    font-size: 16px; 
-  }
-
   .footer .footer-logo h3 {
     font-size: 30px;
   }
+
+  .footer h5 {
+    font-size: 16px;
+  }
+
+  .footer ul li {
+    display: block; /* Stack list items */
+    margin: 5px 0;
+  }
+
+  .footer .social-icons a {
+    font-size: 1.2rem;
+    margin: 5px;
+  }
 }
+
 
 
 
@@ -603,7 +570,9 @@ a {
 /* ##################################################################  profile  ####################################################  */
 
 
-
+.vh {
+  height: 100vh;
+}
 
 .profile {
   border: 2px solid rgb(0, 0, 0);
@@ -639,20 +608,17 @@ a {
 
 
 
-
 .wish-card-img-top {
   width: 100%;  
-  height: 100%;
+  height: auto; /* Maintain aspect ratio */
 }
 
 .wish-card {
   background: black;
   width: 100%;
   border-radius: 8px;
-  overflow: hidden;
   position: relative; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
 }
 
 .wish-card-body {
@@ -668,7 +634,7 @@ a {
 }
 
 .wish-card-title {
-  font-size: 25px;
+  font-size: 20px; /* Adjust for better responsiveness */
   font-weight: bold;
   background: rgba(41, 40, 40, 0.3);
   padding: 3px 5px;
@@ -679,6 +645,7 @@ a {
   font-size: 14px;
 }
 
+/* Hover Effect */
 .wish-card.hover-effect:hover {
   transform: translateY(-10px);  
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
@@ -689,8 +656,7 @@ a {
   transform: translateY(0);  
 }
 
-
-
+/* Responsive Button */
 .btn {
   padding: 8px 16px;
   font-size: 14px;
@@ -709,157 +675,32 @@ a {
   color: black;
 }
 
+/* Make Button Responsive */
+.btn-responsive {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .btn-responsive {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-responsive {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+}
+
 
 /* ############################################################# Cardplay ######################################################## */
 
 
-.container {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.movie-card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.movie-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.movie-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(1);
-}
-
-.movie-details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  color: #fff;
-  flex-direction: column;
-}
-
-.movie-summary {
-  max-width: 600px;
-}
-
-#title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.movie-summary p {
-  font-size: .8rem;
-  margin-bottom: 15px;
-}
-
-.movie-info {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
-}
-
-.movie-info li {
-  margin-bottom: 5px;
-}
-
-h6, #genre, #yeear {
-  display: inline-block;
-  margin-right: 10px;
-  color: #ffc107;
-  font-weight: 400;
-}
-
-#genre, #yeear {
-  font-size: 1rem;
-  color: #fff;
-}
-
-#rating {
-  border: 1px solid black;
-  font-size: 1rem;
-  background: #ffc107;
-  color: #000;
-  padding: 3px;
-  border-radius: 1px;
-}
-
-.button-group {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.btn-play {
-  background-color: #ffc107;
-  border: 2px solid #ffc107;
-}
-
-.btn-play:hover {
-  background-color: #ffb300;
-}
-
-.btn-wishlist {
-  background-color: #dc3545;
-  border: 2px solid #dc3545;
-}
-
-.btn-wishlist:hover {
-  background-color: #c82333;
-}
-
-.btn i {
-  margin-right: 8px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  #title {
-      font-size: 1.5rem;
-  }
-
-  .movie-summary p {
-      font-size: 0.9rem;
-  }
-
-  .movie-info {
-      font-size: 0.8rem;
-  }
-
-  .button-group .btn {
-      font-size: 0.9rem;
-      padding: 8px 15px;
-  }
-}
 
 
 /* ############################################################ About #########################################################*/

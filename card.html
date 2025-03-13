@@ -14,101 +14,92 @@
 
   <style>
     
-.card-img-top {
-  width: 100%;  
-  height: 100%;
-}
-
-.card {
-  background: black;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-body {
-  color: white;
-  padding: 20px;
-  position: absolute; 
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0; 
-  transform: translateY(-100%); 
-  transition: opacity 0.3s ease, transform 0.3s ease; 
-}
-
-.card-title {
-  font-size: 25px;
-  font-weight: bold;
-  padding: 3px 5px;
-  border-radius: 10px;
-  background: rgba(41, 40, 40, 0.3);
-}
-
-.card-text {
-  font-size: 10px;
-}
-
-.card.hover-effect:hover {
-  transform: translateY(-5px);  
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
-}
-
-.card.hover-effect:hover .card-body {
-  opacity: 1;  
-  transform: translateY(0);  
-}
-
-.butt-group {
-  display: flex;
-  gap: 10px;
-}
-
-.card-watch {
-  padding: 5px;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-
-.card-wish {
-  background: linear-gradient(90deg, #00bdff, #0079ff);
-  color: white;
-  border: none;
-}
-
-.card-wish:hover {
-  /* background-color: rgb(240, 29, 29); */
-  color: black;
-}
-
-
-
-@media (max-width: 992px) {
-  .card-img-top {
-    height: 100%;
+    .card {
+    position: relative;
+    background: black;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-}
 
-
-@media (max-width: 768px) {
-  .card-img-top {
-    height: 100%; 
+  .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
-}
 
-
-@media (max-width: 480px) {
-  .card-img-top {
-    height: 100%; 
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 10px;
+    background: rgba(41, 40, 40, 0.5);
+    display: inline-block;
+    color: white;
   }
-}
+
+  .card-body .butt-group {
+    display: flex;
+    gap: 10px;
+  }
+
+  .card-body .btn {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .card.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card.hover-effect:hover .card-body {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card-wish {
+    background-color: rgb(0, 0, 0, 0.7);
+    color: white;
+  }
+
+  .card-wish:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .butt-group .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .butt-group .btn:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+  }
   </style>
   
 </head>
@@ -116,218 +107,287 @@
 
 <!--Navbar-->
   
-  <nav class="navbar navbar-expand-lg navbar-dark" id="stick">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="image/M__2___1_-removebg-preview.png" alt="MovieVista Logo" id="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="box">
-          <input class="form-c" type="search" placeholder="Search...." aria-label="Search">
-          <a href="#">
-            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-          </a>
-        </div>
-        <div class="icon d-flex align-items-center">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
-            </li>
-            <li class="nav-item dropdown" id="icon">
-              <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-user"></i>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="login.html">Login</a></li>
-                  <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                  <li><a class="dropdown-item" href="index.html">Logout</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark" id="stick">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="image/M__2___1_-removebg-preview.png" alt="MovieVista Logo" id="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="box">
+        <input class="form-c" type="search" placeholder="Search...." aria-label="Search">
+        <a href="#">
+          <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+        </a>
+      </div>
+      <div class="icon d-flex align-items-center">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+          </li>
+          <li class="nav-item dropdown" id="icon">
+            <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="login.html">Login</a></li>
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="index.html">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <!--card section-->
 
-<br>
 
-
-<div class="container my-5">
+<h5 class="heading text-center" style="color: white;">Trending Movies</h5>
+<div class="container">
+  <div class="see-more">
+  </div>
+  
+  <!-- Wrap in row to maintain Bootstrap grid -->
   <div class="row">
-    <div class="see-more">
-      <h5 class="heading" style="color: white;">Trending Movies</h5>
-    </div>
-      <a href="#">
-      <div class="col-md-3 mb-3">
-        <div class="card hover-effect">
-          <img src="image/toptrending/tumbbad.jpg" class="card-img-top" alt="Card Image">
-          <div class="card-body">
-            <h5 class="card-title">Tumbbad</h5>
-            <div class="butt-group">
-              <a href="Trendingmovietrailer/Tumbbad Trailer.mp4">
-              <button class="btn btn-watch card-watch"><i class="fa-solid fa-film"></i> Watch Trailer</button>
-              </a>
-              <a href="">
-              <button class="btn btn-wishlist card-wish"><i class="fa-solid fa-plus"></i> Watchlist</button>
-              </a>
-            </div>
-          </div>
-      </a>
-  </div>
-</div>
-
-
+    
+    <!-- Card 1 -->
     <div class="col-md-3 mb-3">
-        <a href="">
-          <div class="card hover-effect">
-            <img src="image/toptrending/maharaja.jpeg" class="card-img-top" alt="Card Image">
-            <div class="card-body">
-              <h5 class="card-title">Maharaja</h5>
-              <div class="butt-group">
-                <a href="H-video/videoplayback.mp4">
-                  <button class="btn btn-watch card-watch"><i class="fa-solid fa-film"></i> Watch Trailer</button>
-                </a>
-                <a href="">
-                  <button class="btn btn-wishlist card-wish"><i class="fa-solid fa-plus"></i> Watchlist</button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </a>
-    </div>
+      <div class="card hover-effect">
+        <a href="cardplay.html">
 
-
-
-    <div class="col-md-3 mb-3">
-      <a href="cardplay.html">
-        <div class="card hover-effect">
           <img src="image/toptrending/johnwick.jpg" class="card-img-top" alt="Card Image">
-          <div class="card-body">
-            <h5 class="card-title">John Wick 4</h5>
-            <div class="butt-group">
-              <a href="Trendingmovietrailer/John wick.mp4">
-                <button class="btn btn-watch card-watch"><i class="fa-solid fa-film"></i> Watch Trailer</button>
-              </a>
-              <a href="">
-                <button class="btn btn-wishlist card-wish"><i class="fa-solid fa-plus"></i> Watchlist</button>
-              </a>
-            </div>
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">John Wick</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
           </div>
         </div>
-      </a>
+      </div>
     </div>
 
+    <!-- Card 2 -->
     <div class="col-md-3 mb-3">
-      <a href="">
-        <div class="card hover-effect">
-          <img src="image/toptrending/kill.jpg" class="card-img-top" alt="Card Image">
-          <div class="card-body">
-            <h5 class="card-title">Kill</h5>
-            <div class="butt-group">
-              <a href="Trendingmovietrailer/KILL  TRAILER.mp4">
-                <button class="btn btn-watch card-watch"><i class="fa-solid fa-film"></i> Watch Trailer</button>
-              </a>
-              <a href="">
-                <button class="btn btn-wishlist card-wish"><i class="fa-solid fa-plus"></i> Watchlist</button>
-              </a>
-            </div>
+      <div class="card hover-effect">
+        <img src="image/toptrending/maharaja.jpeg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Maharaja</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
           </div>
         </div>
-      </a>
+      </div>
     </div>
 
-
+    <!-- Card 3 -->
     <div class="col-md-3 mb-3">
-      <a href="">
-        <div class="card hover-effect">
-          <img src="image/toptrending/evildeadrise.jpg" class="card-img-top" alt="Card Image">
-          <div class="card-body">
-            <h5 class="card-title">Evil Dead Rise</h5>
-            <div class="butt-group">
-              <a href="Trendingmovietrailer/Evil Dead rise.mp4">
-                <button class="btn btn-watch card-watch"><i class="fa-solid fa-film"></i> Watch Trailer</button>
-              </a>
-              <a href="">
-                <button class="btn btn-wishlist card-wish"><i class="fa-solid fa-plus"></i> Watchlist</button>
-              </a>
-            </div>
+      <div class="card hover-effect">
+        <img src="image/toptrending/tunn.jpeg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Tumbbad</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
           </div>
         </div>
-      </a>
+      </div>
     </div>
 
+
+    <!-- Card 4 -->
     <div class="col-md-3 mb-3">
-      <a href="">
-        <div class="card hover-effect">
-          <img src="image/toptrending/la-la-land.jpg" class="card-img-top" alt="Card Image">
-          <div class="card-body">
-            <h5 class="card-title">La La Land</h5>
-            <div class="butt-group">
-              <a href="Trendingmovietrailer/La La Land Trailer.mp4">
-                <button class="btn btn-watch card-watch"><i class="fa-solid fa-film"></i> Watch Trailer</button>
-              </a>
-              <a href="">
-                <button class="btn btn-wishlist card-wish"><i class="fa-solid fa-plus"></i> Watchlist</button>
-              </a>
-            </div>
+      <div class="card hover-effect">
+        <img src="image/toptrending/kashmir files.jpg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">The Kashmir Files</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
           </div>
         </div>
-      </a>
+      </div>
     </div>
 
+
+    <!-- Card 5 -->
     <div class="col-md-3 mb-3">
-      <a href="">
-        <div class="card hover-effect">
-          <img src="image/toptrending/kashmir files.jpg" class="card-img-top" alt="Card Image">
-          <div class="card-body">
-            <h5 class="card-title">Kashmir Files</h5>
-            <div class="butt-group">
-              <a href="Trendingmovietrailer/The Kashmir Files.mp4">
-                <button class="btn btn-watch card-watch"><i class="fa-solid fa-film"></i> Watch Trailer</button>
-              </a>
-              <a href="">
-                <button class="btn btn-wishlist card-wish"><i class="fa-solid fa-plus"></i> Watchlist</button>
-              </a>
-            </div>
+      <div class="card hover-effect">
+        <img src="image/toptrending/kill.jpg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Kill</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
           </div>
         </div>
-      </a>
+      </div>
     </div>
 
+
+    <!-- Card 6 -->
     <div class="col-md-3 mb-3">
-      <a href="">
-        <div class="card hover-effect">
-          <img src="image/toptrending/us.jpg" class="card-img-top" alt="Card Image">
-          <div class="card-body">
-            <h5 class="card-title">Us</h5>
-            <div class="butt-group">
-              <a href="Trendingmovietrailer/Us trailer.mp4">
-                <button class="btn btn-watch card-watch"><i class="fa-solid fa-film"></i> Watch Trailer</button>
-              </a>
-              <a href="">
-                <button class="btn btn-wishlist card-wish"><i class="fa-solid fa-plus"></i> Watchlist</button>
-              </a>
-            </div>
+      <div class="card hover-effect">
+        <img src="image/toptrending/bulbubul.jpg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Bulbbul</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
           </div>
         </div>
-      </a>
+      </div>
     </div>
 
 
+    <!-- Card 7 -->
+    <div class="col-md-3 mb-3">
+      <div class="card hover-effect">
+        <img src="image/toptrending/us.jpg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">US</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+
+    <!-- Card 8 -->
+    <div class="col-md-3 mb-3">
+      <div class="card hover-effect">
+        <img src="image/toptrending/getout.jpg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">get Out</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 9 -->
+    <div class="col-md-3 mb-3">
+      <div class="card hover-effect">
+        <img src="image/bollycard/karthikey2.jpg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">karthikey 2</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 10 -->
+    <div class="col-md-3 mb-3">
+      <div class="card hover-effect">
+        <img src="image/bollycard/akhanda.webp" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Akhanda</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 11 -->
+    <div class="col-md-3 mb-3">
+      <div class="card hover-effect">
+        <img src="image/bollycard/kgf.jpg" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">K.G.F</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 12 -->
+    <div class="col-md-3 mb-3">
+      <div class="card hover-effect">
+        <img src="image/bollycard/kanguva.webp" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Kanguva</h5>
+          <div class="butt-group">
+            <button class="btn btn-watch card-watch">
+              <i class="fa-solid fa-play"></i> Play
+            </button>
+            <button class="btn btn-wishlist card-wish">
+              <i class="fa-regular fa-heart" style="color: red;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     
     
+  </div> 
+</div> 
 
-  </div>
-</div>
 
 
 
@@ -384,6 +444,8 @@
     <small>&copy; 2024 MovieVista. All rights reserved.</small>
   </div>
 </footer>
+
+
 
   <script src="assest/js/bootstrap.min.js"></script>
 </body>
